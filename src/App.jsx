@@ -5,6 +5,7 @@ import HitlInbox from './components/HitlInbox';
 import WebhookDispatcherConsole from './components/WebhookDispatcherConsole';
 import TelegramSyncPreview from './components/TelegramSyncPreview';
 import TimeoutSettingsCard from './components/TimeoutSettingsCard';
+import OutcomeChart from './components/OutcomeChart';
 import CabModal from './components/CabModal';
 import Footer from './components/Footer';
 import { INITIAL_REQUESTS, INITIAL_TIMEOUT_CONFIG } from './data/mockPingData';
@@ -61,6 +62,9 @@ export default function App() {
           onJumpToInbox={scrollToInbox}
           onJumpToDispatcher={scrollToDispatcher}
         />
+
+        {/* Julien Bek $1:$6 Economic Engine / Larry Ellison SLA Proof */}
+        <OutcomeChart onCtaClick={() => setIsCabOpen(true)} />
 
         {/* Live HITL Approval Queue */}
         <HitlInbox
